@@ -13,6 +13,8 @@ class Team(models.Model):
 
     def __str__(self):
         return self.name
+    def get_absolute_url(self):
+        return reverse('team-list')
 
 class Player(models.Model):
     """ ciclista """
@@ -27,5 +29,8 @@ class Player(models.Model):
     
     def __str__(self):
         return self.first_name + " " + self.last_name
+    
     def get_absolute_url(self):
         return reverse('player-list')
+    
+   
